@@ -3,7 +3,7 @@
 def pill_bottle(bottles):
   pills = []
   for i, bottle in enumerate(bottles):
-    pills += [bottle.pill()] * i
+    pills.append(bottle.pill() * i)
   weight = use_scale(pills)
   index = (weight - 190) * 10
   return int(index + 0.1)
